@@ -10,3 +10,7 @@ const path    = require("path");
 const fileUpload = require('express-fileupload');
 const mysql = require('mysql');
 
+app.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/public/index.html'));
+});
+
