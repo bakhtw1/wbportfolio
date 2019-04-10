@@ -1,0 +1,23 @@
+{
+  "name": "wbportfolio",
+  "version": "1.0.0",
+  "description": "Waqas Bakht Professional Website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bakhtw1/wbportfolio.git"
+  },
+  "keywords": [
+    "wbmindles"
+  ],
+  "author": "Waqas Bakht",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bakhtw1/wbportfolio/issues"
+  },
+  "homepage": "https://github.com/bakhtw1/wbportfolio#readme"
+}
