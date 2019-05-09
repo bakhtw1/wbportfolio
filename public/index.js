@@ -1,10 +1,22 @@
+
 $(document).ready(function() {
     
     typeWriter("Software Engineering Student","f1", 0);    
     typeWriter("Full Stack Developer","f2", 0);    
     typeWriter("Jack of All Tounges","f3", 0);    
 
+    $(window).scroll( function(){
+        $('#about-card div.row').each(fadeInElements);
+    });
 });
+
+function fadeInElements(i){
+    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+    if( bottom_of_window > bottom_of_object ){
+        $(this).animate({'opacity':'1'},500);                
+    }
+}
 
 function typeWriter(txt, id, num) {
     // console.log(txt);
