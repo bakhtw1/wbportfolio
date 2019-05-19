@@ -7,13 +7,28 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch via npm",
-            "cwd": "${workspaceFolder}",
+            "name": "Launch via NPM",
             "runtimeExecutable": "npm",
             "runtimeArgs": [
-                "run","dev"
+                "run-script",
+                "debug",
+                "33994"
             ],
-            "port": 9229
+            "restart": true,
+            "port": 33994
         },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Nodemon Debug",
+            "port": 9229,
+            "restart": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js"
+        }
     ]
 }
