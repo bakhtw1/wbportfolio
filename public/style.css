@@ -38,6 +38,11 @@ div.underline {
     text-align: center;
 }
 
+.title-card h1, .title-card h2, .title-card  h3 {
+    color: #fff;
+    margin: auto;
+}
+
 .bg-image {
     position: fixed;
     left: 0;
@@ -110,7 +115,7 @@ img.profile-photo {
     grid-template-columns: repeat(5, [col] 20% ) ;
     grid-template-rows: repeat(5, [row] auto );
     background-color: #fff;
-    color: #444;
+    color: #fff;
     /* padding: 10px; */
 }
 
@@ -120,7 +125,7 @@ img.profile-photo {
 
 .box {
     width: 100%;
-    background-color: #444;
+    background-color: #fff;
     color: #fff;
     /* border-radius: 5px; */
     padding: 20px;
@@ -153,5 +158,10 @@ img.profile-photo {
 .f {
     grid-column: col 2 / span 4;
     grid-row: row 3;
+}
+
+/* Default Text Colors */
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
 }
 

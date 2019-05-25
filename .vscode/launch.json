@@ -11,10 +11,8 @@
             "runtimeExecutable": "npm",
             "runtimeArgs": [
                 "run-script",
-                "debug",
-                "33994"
+                "debug"
             ],
-            "restart": true,
             "port": 33994
         },
         {
