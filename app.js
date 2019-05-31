@@ -45,5 +45,5 @@ app.get('/landing-image.jpg', function(req, res){
     res.sendFile(path.join(__dirname+'/public/images/landing-image.jpg'));
 });
 
-app.listen(portNum);
+app.listen(3000);
 console.log('Running app at localhost: ' + portNum);
