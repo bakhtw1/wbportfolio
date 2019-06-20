@@ -3,11 +3,29 @@ $(document).ready(function() {
     
     typeWriter("Software Engineering Student","f1", 0);    
     typeWriter("Full Stack Developer","f2", 0);    
-    typeWriter("Jack of All Tounges","f3", 0);    
+    typeWriter("Fun Guy","f3", 0);    
 
     $(window).scroll( function(){
         $('#about-card div.row').each(fadeInElements);
     });
+
+    var pathEls = document.querySelectorAll('path');
+    for (var i = 0; i < pathEls.length; i++) {
+        var pathEl = pathEls[i];
+        var offset = anime.setDashoffset(pathEl);
+        pathEl.setAttribute('stroke-dashoffset', offset);
+        anime({
+            targets: pathEl,
+            strokeDashoffset: [offset, 0],
+            duration: anime.random(1000, 3000),
+            delay: anime.random(0, 2000),
+            loop: true,
+            direction: 'alternate',
+            easing: 'easeInOutSine',
+            autoplay: true
+        });
+    }
+    
 });
 
 //Fade in Elements of Screen
@@ -24,7 +42,7 @@ function typeWriter(txt, id, num) {
     if (num < txt.length) {
         document.getElementById(id).innerHTML += txt.charAt(num);
         num++;
-        setTimeout(typeWriter, 50, txt, id, num);
+        setTimeout(typeWriter, 75, txt, id, num);
     }
 }
 

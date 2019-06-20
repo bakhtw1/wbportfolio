@@ -39,7 +39,7 @@ div.underline {
 }
 
 .title-card h1, .title-card h2, .title-card  h3 {
-    color: #fff;
+    color: #000000;
     margin: auto;
 }
 
@@ -50,17 +50,17 @@ div.underline {
     z-index: 1;
   
     display: block;
-    background-image: url("landing-image.jpg");
+    /* background-image: url("https://image.freepik.com/free-photo/mountain-landscape-skyline_1388-166.jpg"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
     height: 100%;
   
-    -webkit-filter: blur(2px);
+    /* -webkit-filter: blur(2px);
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
     -ms-filter: blur(2px);
-    filter: blur(2px);
+    filter: blur(2px); */
 }
 
 span.links {
@@ -165,3 +165,22 @@ h1, h2, h3, h4, h5, h6 {
     color: #000;
 }
 
+.line1, .line2, .line3, .line4 {
+	stroke-dasharray:2300;
+	stroke-dashoffset:2300;
+	animation: dash 50s linear forwards;
+} 
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+} 
+/* .anim, .anim svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .anim path {
+    stroke-width: 2;
+  } */
