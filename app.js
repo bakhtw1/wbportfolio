@@ -38,7 +38,7 @@ app.get('/background.jpg', function(req, res){
 });
 
 app.get('/thumbnail.jpeg', function(req, res){
-    res.sendFile(path.join(__dirname+'/public/images/0.jpeg'));
+    res.sendFile(path.join(__dirname+'/public/images/pro-file-pic.jpg'));
 });
  
 app.get('/landing-image.jpg', function(req, res){
