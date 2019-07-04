@@ -45,5 +45,9 @@ app.get('/landing-image.jpg', function(req, res){
     res.sendFile(path.join(__dirname+'/public/images/landing-image.jpg'));
 });
 
+app.get('/calApp.png', function(req, res){
+    res.sendFile(path.join(__dirname+'/public/images/calendarApp.png'));
+});
+
 app.listen(3000);
 console.log('Running app at localhost: ' + portNum);

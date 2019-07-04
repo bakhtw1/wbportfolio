@@ -113,7 +113,7 @@ img.profile-photo {
     display: grid;
     /* grid-gap: 10px; */
     grid-template-columns: repeat(5, [col] 20% ) ;
-    grid-template-rows: repeat(5, [row] auto );
+    grid-template-rows: repeat(6, [row] auto );
     background-color: #fff;
     color: #fff;
     /* padding: 10px; */
@@ -158,6 +158,16 @@ img.profile-photo {
 .f {
     grid-column: col 2 / span 4;
     grid-row: row 3;
+}
+
+.g {
+    grid-column: col;
+    grid-row: row 4;
+}
+
+.h {
+    grid-column: col 2 / span 4;
+    grid-row: row 4;
 }
 
 /* Default Text Colors */

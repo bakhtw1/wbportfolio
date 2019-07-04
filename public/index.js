@@ -8,8 +8,16 @@ $(document).ready(function() {
     $(window).scroll( function(){
         $('#about-card div.row').each(fadeInElements);
     });
+
+    $("#sndmsg").click(sendMessage);
     
 });
+
+//Callback for message button
+function sendMessage() {
+    
+}
+
 
 //Fade in Elements of Screen
 function fadeInElements(i){
