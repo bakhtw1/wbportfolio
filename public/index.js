@@ -15,7 +15,21 @@ $(document).ready(function() {
 
 //Callback for message button
 function sendMessage() {
-    
+    $.ajax({
+        type: "POST",
+        url: "/sendMessage",
+        data: {
+            "email": $('#emailEntry').val(),
+            "message": $('#msgbox').val()
+        },
+        dataType: "json",
+        success: function(resultData){
+            alert("Post Complete");
+        },
+        fail: function(error){
+            alert("error")
+        }
+  });
 }
 
 

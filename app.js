@@ -11,8 +11,25 @@ const path    = require("path");
 const fileUpload = require('express-fileupload');
 const fs = require('fs');
 const JavaScriptObfuscator = require('javascript-obfuscator');
+var bodyParser = require('body-parser');
 
 const portNum = process.argv[2];
+
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'messagewaqasbakht1@gmail.com',
+    pass: 'Omran3akht1'
+  }
+});
+
+//decode post requests
+// app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 
 // Send HTML at root
 app.get('/', function(req,res){ 
@@ -48,6 +65,26 @@ app.get('/landing-image.jpg', function(req, res){
 app.get('/calApp.png', function(req, res){
     res.sendFile(path.join(__dirname+'/public/images/calendarApp.png'));
 });
+
+app.post('/sendMessage', function(req, res){
+    console.log(req.body);
+    
+    var mailOptions = {
+        from: 'messagewaqasbakht1@gmail.com',
+        to: 'bakhtw1@gmail.com',
+        subject: 'Sending Email using Node.js',
+        text: 'That was easy!'
+    };
+      
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
+});
+
 
 app.listen(3000);
 console.log('Running app at localhost: ' + portNum);
