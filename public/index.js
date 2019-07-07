@@ -24,9 +24,10 @@ function sendMessage() {
         },
         dataType: "json",
         success: function(resultData){
-            alert("Post Complete");
+            $('#msgform')[0].reset();
+            alert("");
         },
-        fail: function(error){
+        error: function(error){
             alert("error")
         }
   });

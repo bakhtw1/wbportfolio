@@ -72,19 +72,22 @@ app.post('/sendMessage', function(req, res){
     var mailOptions = {
         from: 'messagewaqasbakht1@gmail.com',
         to: 'bakhtw1@gmail.com',
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
+        subject: req.body.email,
+        text: req.body.message
     };
       
-      transporter.sendMail(mailOptions, function(error, info){
+    transporter.sendMail(mailOptions, function(error, info){
         if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
+            res.send(error);
+        } 
+        else {
+            res.send({
+                'message':"Success"
+            })
         }
-      });
+    });
 });
 
 
 app.listen(3000);
-console.log('Running app at localhost: ' + portNum);
+console.log('Running app at localhost: 3000');
