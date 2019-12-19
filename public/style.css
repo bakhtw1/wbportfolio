@@ -117,7 +117,7 @@ img.profile-photo {
     background-color: #fff;
     color: #fff;
     /* padding: 10px; */
-}
+} 
 
 .wrapper div {
     z-index: 4;
@@ -134,13 +134,13 @@ img.profile-photo {
 }
 
 .a {
-    grid-column: col / span 1;
+    grid-column: col / span 5;
     grid-row: row;
 }
-.b {
+/* .b {
     grid-column: col 2 / span 4;
     grid-row: row;
-}
+} */
 .c {
     grid-column: col;
     grid-row: row 2;
@@ -151,14 +151,14 @@ img.profile-photo {
 }
 
 .e {
-    grid-column: col;
+    grid-column: col 1 / span 5;
     grid-row: row 3;
 }
 
-.f {
+/* .f {
     grid-column: col 2 / span 4;
     grid-row: row 3;
-}
+} */
 
 .g {
     grid-column: col;
