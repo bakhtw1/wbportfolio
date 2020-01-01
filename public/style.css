@@ -113,6 +113,10 @@ img.profile-photo {
     grid-template-rows: repeat(1, [row] auto );
 }
 
+.titleHeader {
+    border-bottom: 2px solid red;
+}
+
 .skillsrow h5 {
     padding: 0px;
     margin: 0px;
@@ -151,8 +155,8 @@ img.profile-photo {
     /* grid-gap: 10px; */
     grid-template-columns: repeat(5, [col] 20% ) ;
     grid-template-rows: repeat(6, [row] auto );
-    background-color: #fff;
-    color: #fff;
+    
+    /* color: #fff; */
     /* padding: 10px; */
 } 
 
@@ -162,7 +166,7 @@ img.profile-photo {
 
 .box {
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
     color: #fff;
     /* border-radius: 5px; */
     padding: 20px;
@@ -190,6 +194,9 @@ img.profile-photo {
 .e {
     grid-column: col 1 / span 5;
     grid-row: row 3;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
 }
 
 /* .f {
@@ -231,3 +238,13 @@ h1, h2, h3, h4, h5, h6 {
   .anim path {
     stroke-width: 2;
   } */
+
+.expbox {
+    padding: 5px;
+    background-color: #fff;
+    color: black;
+    /* height: 200px; */
+    width: 75%;
+    display: inline-block;
+    text-align: left;
+}
