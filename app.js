@@ -36,6 +36,10 @@ app.get('/', function(req,res){
     res.sendFile(path.join(__dirname+'/public/index.html'));
 });  
   
+app.get('/jomar', function(req,res){ 
+    res.sendFile(path.join(__dirname+'/public/wt1report.html'));
+});
+
 // Send Style
 app.get('/style.css', function(req,res){
     res.sendFile(path.join(__dirname+'/public/style.css'));
